@@ -1,0 +1,1 @@
+if (keyboard_check(vk_f5) == true) game_restart();
