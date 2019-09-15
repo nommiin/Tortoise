@@ -24,5 +24,5 @@ switch ((argument[2] >> 16) & 0xF) {
 		break;	
 	}
 	
-	default: Environment[? "Error"] = "Unknown Type: " + string((argument[2] >> 16) & 0xF);
+	default: Environment[? "Error"] = "Could not perform PushImmediate operation, unknown type given: " + string((argument[2] >> 16) & 0xF);
 }

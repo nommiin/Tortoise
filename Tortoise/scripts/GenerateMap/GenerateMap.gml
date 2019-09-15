@@ -1,0 +1,35 @@
+/// @function GenerateMap( array )
+/// @argument array The array to fill with the instruction handlers
+var InstructionMap = argument[0];
+for(var i = 0; i < 0xFF; i++) InstructionMap[@ i] = undefined;
+InstructionMap[@ eOpcode.Convert] = -1;
+InstructionMap[@ eOpcode.Multiply] = DoMultiply;
+InstructionMap[@ eOpcode.Divide] = DoDivide;
+InstructionMap[@ eOpcode.Remainder] = DoRemainder;
+InstructionMap[@ eOpcode.Modulus] = DoModulus;
+InstructionMap[@ eOpcode.Add] = DoAdd;
+InstructionMap[@ eOpcode.Subtract] = DoSubtract;
+InstructionMap[@ eOpcode.Or] = DoOr;
+InstructionMap[@ eOpcode.Xor] = DoXor;
+InstructionMap[@ eOpcode.Negate] = DoNegate;
+InstructionMap[@ eOpcode.Not] = DoNot;
+InstructionMap[@ eOpcode.ShiftLeft] = DoShiftLeft;
+InstructionMap[@ eOpcode.ShiftRight] = DoShiftRight;
+InstructionMap[@ eOpcode.Compare] = DoCompare;
+InstructionMap[@ eOpcode.Pop] = DoPop;
+InstructionMap[@ eOpcode.PushImmediate] = DoPushImmediate;
+InstructionMap[@ eOpcode.Duplicate] = DoDuplicate;
+InstructionMap[@ eOpcode.Return] = DoReturn;
+InstructionMap[@ eOpcode.Exit] = DoExit;
+InstructionMap[@ eOpcode.PopNull] = DoPopNull;
+InstructionMap[@ eOpcode.Branch] = DoBranch;
+InstructionMap[@ eOpcode.BranchTrue] = DoBranchTrue;
+InstructionMap[@ eOpcode.BranchFalse] = DoBranchFalse;
+InstructionMap[@ eOpcode.PushEnvironment] = DoPushEnvironment;
+InstructionMap[@ eOpcode.PopEnvironment] = DoPopEnvironment;
+InstructionMap[@ eOpcode.Push] = DoPush;
+InstructionMap[@ eOpcode.PushLocal] = DoPushLocal;
+InstructionMap[@ eOpcode.PushGlobal] = DoPushGlobal;
+InstructionMap[@ eOpcode.PushBuiltin] = DoPushBuiltin;
+InstructionMap[@ eOpcode.Call] = DoCall;
+InstructionMap[@ eOpcode.Break] = DoBreak;

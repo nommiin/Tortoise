@@ -1,4 +1,4 @@
-var Data = buffer_load("G:\\Runtime\\builds\\gm_ttt_42856\\gm_ttt_41922\\Studio.win");
+var Data = buffer_load("G:\\Runtime\\builds\\gm_ttt_81552\\gm_ttt_13298\\Studio.win");
 
 #region Read IFF
 var Header = IChunk(Data), Valid = true;
