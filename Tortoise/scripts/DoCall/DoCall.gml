@@ -8,6 +8,14 @@ if (ds_stack_size(Stack) >= Instruction & 0xFF) {
 		for(var i = 0, _i = (Instruction & 0xFF); i < _i; i++) {
 			Arguments[array_length_1d(Arguments)] = ds_stack_pop(Stack);
 		}
-		ds_stack_push(Stack, function_execute_array(Name, Arguments));
+		
+		var Script = global.ScriptMap[? Name];
+		if (Script != undefined) {
+			show_debug_message("Executing script..." + string(Name));
+			ds_stack_push(Stack, ExecuteBytecode(Environment, Script));
+		} else {
+			show_debug_message("Executing function..." + string(Name));
+			ds_stack_push(Stack, function_execute_array(Name, Arguments));
+		}
 	} else Environment[? "Error"] = "Could not perform Call operation, unknown function name was given";
 } else Environment[? "Error"] = "Could not perform Call operation, expected " + string(Instruction & 0xFF) + " arguments when stack only has " + string(ds_stack_size(Stack));

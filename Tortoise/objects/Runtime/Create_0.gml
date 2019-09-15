@@ -1,4 +1,4 @@
-var Data = buffer_load("G:\\Runtime\\builds\\gm_ttt_81552\\gm_ttt_13298\\Studio.win");
+var Data = buffer_load("D:\\Tortoise\\Tortoise-Research\\builds\\data.win");
 
 #region Read IFF
 var Header = IChunk(Data), Valid = true;
@@ -14,7 +14,7 @@ if (Header[? "Name"] == "FORM") {
 
 #region Read Chunks
 if (Valid == true) {
-	var ChunkOrder = ["STRG", "GEN8", "FUNC", "VARI", "CODE"];
+	var ChunkOrder = ["STRG", "GEN8", "FUNC", "VARI", "CODE", "SCPT"];
 	for(var i = 0; i < array_length_1d(ChunkOrder); i++) {
 		var ChunkRead = Chunks[? ChunkOrder[i]];
 		if (ChunkRead != undefined) {
@@ -32,6 +32,6 @@ if (Valid == true) {
 #region Runtime Logic
 if (Valid == true) {
 	Environment = IEnvironment();
-	ExecuteBytecode(Environment, global.CodeBlocks[? "gml_Script_script2"]);
+	ExecuteBytecode(Environment, global.CodeBlocks[? "gml_Script_script_main"]);
 }
 #endregion

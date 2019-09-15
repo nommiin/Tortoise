@@ -383,6 +383,14 @@
             }
         },
         {
+            "Key": "88ba6fb5-c8ff-4613-aa64-79307d59642a",
+            "Value": {
+                "id": "44a64544-ecd3-481c-ab74-98900f0df4d0",
+                "resourcePath": "scripts\\ReadSCPT\\ReadSCPT.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8dfc1958-99ab-4776-81c1-35d0cbe29b84",
             "Value": {
                 "id": "8b8ba1b9-ca8f-4a29-b3b9-b29bb6029e1a",
@@ -666,6 +674,7 @@
         "87ca5e94-e676-43e4-bb6e-f718431b72a4",
         "c696a517-2b77-4a2b-8e9a-3c5329147407",
         "aa9c5a4e-5af1-43fe-9b7b-4b3467e56c7a",
+        "88ba6fb5-c8ff-4613-aa64-79307d59642a",
         "7e64c9df-a6d8-4aff-8204-9ead7daead4c",
         "6ca792a8-18bf-41cd-9dfc-0b68c02606c5",
         "770e7ee7-a285-437e-b04a-038e0b4eda63",
