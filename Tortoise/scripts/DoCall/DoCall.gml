@@ -10,12 +10,7 @@ if (ds_stack_size(Stack) >= Instruction & 0xFF) {
 		}
 		
 		var Script = global.ScriptMap[? Name];
-		if (Script != undefined) {
-			show_debug_message("Executing script..." + string(Name));
-			ds_stack_push(Stack, ExecuteBytecode(Environment, Script));
-		} else {
-			show_debug_message("Executing function..." + string(Name));
-			ds_stack_push(Stack, function_execute_array(Name, Arguments));
-		}
+		if (Script != undefined) ds_stack_push(Stack, ExecuteBytecode(Environment, Script));
+		else ds_stack_push(Stack, function_execute_array(Name, Arguments));
 	} else Environment[? "Error"] = "Could not perform Call operation, unknown function name was given";
 } else Environment[? "Error"] = "Could not perform Call operation, expected " + string(Instruction & 0xFF) + " arguments when stack only has " + string(ds_stack_size(Stack));
