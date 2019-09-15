@@ -17,4 +17,6 @@ https://github.com/krzys-h/UndertaleModTool
 
 https://github.com/donkeybonks/acolyte/wiki/Bytecode
 
+https://github.com/GameMakerDiscord/function-execute
+
 **GMAssetCompiler.exe**, **GMDebug.exe**
